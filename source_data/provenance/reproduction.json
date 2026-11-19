@@ -1,0 +1,33 @@
+{
+ "passed": true,
+ "checks": {
+  "EENS": true,
+  "objective": true,
+  "displacement": true,
+  "balance": true
+ },
+ "new_metrics": {
+  "site_generation_MWh": 2919950.0749428417,
+  "D_fossil_per_MWh": 0.20169767329924057,
+  "avoided_GWP100_t_per_MWh": 0.04927889381231336,
+  "avoided_GWP20_t_per_MWh": 0.05685063784279481,
+  "s_f": 0.2515018397944042,
+  "m_t_per_MWh_e": 0.4898462557231936,
+  "MEF_t_per_MWh_e": 0.12319723453078339,
+  "balance_residual_MWh": -5.159527063369751e-07,
+  "balance_residual_relative": -1.766991534425721e-13
+ },
+ "reference_metrics": {
+  "site_generation_MWh": 2919950.0749428417,
+  "D_fossil_per_MWh": 0.20169767329924057,
+  "avoided_GWP100_t_per_MWh": 0.04927889381231336,
+  "avoided_GWP20_t_per_MWh": 0.05685063784279481,
+  "s_f": 0.2515018397944042,
+  "m_t_per_MWh_e": 0.4898462557231936,
+  "MEF_t_per_MWh_e": 0.12319723453078339,
+  "balance_residual_MWh": -6.509944796562195e-07,
+  "balance_residual_relative": -2.229471268165305e-13
+ },
+ "EENS_difference": 0.0,
+ "cost_difference": 5.7220458984375e-06
+}

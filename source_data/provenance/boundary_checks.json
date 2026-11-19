@@ -1,0 +1,27 @@
+{
+ "passed": true,
+ "utc": "2026-11-14T15:53:59.515234+00:00",
+ "paired_cases": 144,
+ "source_arrays": 288,
+ "joint_scenario_rows": 110592,
+ "scenario_rows_are_not_new_LP_cases": true,
+ "max_reproduction_error": 5.41739191556334e-13,
+ "injection_primary_reproduced": true,
+ "equal_leakage_difference_invariant": true,
+ "limitations": [
+  "H2 efficiency energy basis unverified: both explicit interpretations reported",
+  "External import intensities are scenarios, not measurements",
+  "P2H product destination and H2 turbine upstream fuel are not closed",
+  "Expanded compression response is an approximation, not an LP",
+  "GWP100 IEA H2 intensity is not recycled into GWP20"
+ ],
+ "constants": {
+  "gas_chain": 0.243023076,
+  "heat_output_eff": 0.488,
+  "boiler_eff": 0.9,
+  "heat_credit_per_h": 0.13177251232,
+  "eta_th_source": "DEA 06 Gas engines, biogas cells C9/C10 = 0.40/0.82 = 0.487804878; 2015 derived engineering benchmark rounded to 0.488, held constant",
+  "H2_kgCO2_per_kg_source": "IEA Global Hydrogen Review 2024 Chapter 7, 10-12 kg CO2eq/kg for unabated natural gas; not a European marginal H2 observation",
+  "heat_rounding_difference_from_v37": 1.6678755555505415e-06
+ }
+}

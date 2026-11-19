@@ -1,0 +1,96 @@
+{
+ "created_utc": "2026-11-02T06:52:42.950280+00:00",
+ "n_weather": 20,
+ "seed": 20261102,
+ "bootstrap_resamples": 20000,
+ "point_ratio": 2.711401772884939,
+ "bootstrap_percentile_95": [
+  2.578377032624108,
+  2.863175629863211
+ ],
+ "bootstrap_percentile_90": [
+  2.599595112980145,
+  2.843048146688452
+ ],
+ "bootstrap_share_at_least_2": 1.0,
+ "bootstrap_share_above_1": 1.0,
+ "leave_one_out_range": [
+  2.6836605467428707,
+  2.7792987086154257
+ ],
+ "leave_one_out_min_weather": 32,
+ "leave_one_out_max_weather": 19,
+ "ratio_without_WS13": 2.720770091064076,
+ "WS13_share_of_resource_net": 0.19184298547260478,
+ "WS13_share_of_eens_net": 0.18905067629640385,
+ "per_weather_ratio_median": 2.9226611545623644,
+ "per_weather_ratio_quartiles": [
+  2.880251444728745,
+  2.922661154565353
+ ],
+ "per_weather_ratio_min": 2.2855828655323798,
+ "per_weather_ratio_max": 2.942776911959859,
+ "weathers_eens_higher": 19,
+ "sign_test_p_two_sided": 4.00543212890625e-05,
+ "DE_UK_share_range": [
+  0.828249872939569,
+  1.0
+ ],
+ "DE_UK_share_median": 0.9013517630421802,
+ "spearman_ratio_vs_DE_UK_share": {
+  "rho": 0.22982456140350876,
+  "p": 0.3438801731989136
+ },
+ "spearman_ratio_vs_DE_share": {
+  "rho": 0.15087719298245614,
+  "p": 0.5375272100958033
+ },
+ "ratio_high_concentration_half": 2.7605935408726716,
+ "ratio_low_concentration_half": 2.6903376571464936,
+ "means": {
+  "eens_mean_MWh": 821.652927657078,
+  "resource_mean_MWh": 303.0362139148552
+ },
+ "sources": {
+  "B3_rule_eens_WS02": "f3f6a1b5f4c29f3b4417337c08bb29d4daad6dc9e4532a7d4797649d2c42c310",
+  "B3_rule_resource_WS02": "b02c5876bab7d033598d3be872b0b4816bd429b6a398e193dfc9cefd2223292e",
+  "B3_rule_eens_WS03": "6d7f5fb440e29d1353ccfe8cec1ba0528fca796964a5e930af0214cab59ecd17",
+  "B3_rule_resource_WS03": "2414d697cedd9f819f2977dc75752ac0e1374f4d784e8ff7d81ac0c20be07d8a",
+  "B3_rule_eens_WS04": "c24b114bd01e0bef5b7d2e1f951703b0b29e493e33f4fed97f9d954a89010faf",
+  "B3_rule_resource_WS04": "c469f80af8bf99baf595f60534ae04f4f720eba0055bcb3988d534f048ea53f5",
+  "B3_rule_eens_WS05": "27e47d4c5755ee96436f750f18452039b63613f3a3c6ccece8e249e3c486b9c5",
+  "B3_rule_resource_WS05": "fe1138c1b837274cd341b624b5471ae8380ec67dbab6de528599e8df78039a0a",
+  "B3_rule_eens_WS06": "00804af44bbf7b3958c7a6483922ebb5f166997f749585bde4f851b0511168eb",
+  "B3_rule_resource_WS06": "520a64751e1a575f2ff478efed329f5ac00d9cf6dfbeab2f2441bab0dab27a8f",
+  "B3_rule_eens_WS07": "dee2c8eda20e9815ce200774eea09d06f24ea15a7a761b683f229da0d7b99b4f",
+  "B3_rule_resource_WS07": "59c9f73ef6eab77c2785262851f2b50a743debbad3b9a47123201c50c8685f8d",
+  "B3_rule_eens_WS10": "3a4cc5c84961c83eb2aea0d0c8c3dc8e613db554c7a3a9ee1ee25b88dc4120b2",
+  "B3_rule_resource_WS10": "7673c5e6328ba182325d2f72d51e88e41c380fa516e324459709939ff7807247",
+  "B3_rule_eens_WS13": "8612bad881f942e9f09c389de166e5628bf00b72312d032a57ac1d7cdcd7d830",
+  "B3_rule_resource_WS13": "dc47dda4a27d91ca17f155610e53262ac327e22fa469337993599d55462f48e9",
+  "B3_rule_eens_WS14": "fe7f805d5bd33436551ae852785188b7f92a5b237ef4e076166a865771fd0e07",
+  "B3_rule_resource_WS14": "f671ea2d44f5ccc48a0c6982c1c7dc13d08ae213618010bc57ce70bf978dd6b8",
+  "B3_rule_eens_WS15": "76bb6e897db02ac7904a609a68460222650eb35403571ad33d20bf188db432b0",
+  "B3_rule_resource_WS15": "667c90dd0d168b7c524555a3363ad7c5bcac1699be74c9b0c57efb87f4fc7d84",
+  "B3_rule_eens_WS17": "e26f7a12fdd4d916e6ac3e3b65a69fd82929fe987992ca5b553b864a685bfd9d",
+  "B3_rule_resource_WS17": "74b3ba131f819a967afaf800d13cc0fdddc63e1d2ef9065424374d2a163e6796",
+  "B3_rule_eens_WS18": "b7a0a417314f8e6f0fb48467d5f504c9328af4b4f8506f3a494a24278b014cc0",
+  "B3_rule_resource_WS18": "d6fd231219d18af51c3f8473663b751ffdfa6eac8f1e5a4c2021cbbdee60ecc7",
+  "B3_rule_eens_WS19": "85d7ebf7f23d1483a077e1b9dcc5c7df96fe9069b6be06425c4c4623b3d12043",
+  "B3_rule_resource_WS19": "433e9b9f55d882ca6cd7fe1e807296ae2c98327a925f28dabbc8fb19f1dad05f",
+  "B3_rule_eens_WS21": "3613826e74811a7e985a2680032c273b9d951e40283bd51788370a03187e9161",
+  "B3_rule_resource_WS21": "717a03a7ff526302f2346c90fdd1b7e8daadb5bfbb70848f95f97227e23cde29",
+  "B3_rule_eens_WS25": "fa38f5940f293f924ea42c3734b551595adeff982d33e0dfd03f5ee7651add31",
+  "B3_rule_resource_WS25": "44ec56eac3ee39c1e7df1647ed6bedb64fc60720d6982d89db0a4d68f2c76029",
+  "B3_rule_eens_WS26": "b3cf22a6db373a71c318e1b757063b9027dd9874d2ba8726923c178d18a613eb",
+  "B3_rule_resource_WS26": "50f2884422df2ca180d7c8fa82b5a04047fa4442fd57fa75e3b7e2ebabb99533",
+  "B3_rule_eens_WS27": "38373204bc580fc04aeb825231d259a3ff0746857335958ff0b3b849e76714ae",
+  "B3_rule_resource_WS27": "38b460ec99aee211fda0bf979083686308f2a415f08cdad3e6afa49895f94263",
+  "B3_rule_eens_WS32": "b80f8753036a4e5db7fb0fe98af75e9b4f912cc25ad2a7e66ce6152ff8310e9f",
+  "B3_rule_resource_WS32": "16225ba344feaa1959bed85c3e3a09537d4737e8255e7f04342b24e5cff37035",
+  "B3_rule_eens_WS33": "c452393dd50d4c55c5f829fe4afb0adcaf1c65024a796c9d1e4194b307d74a87",
+  "B3_rule_resource_WS33": "325b0d6e67cb4e24c6b4a97e5af1c76e1c587da085804ccaf5f4c8177541185e",
+  "B3_rule_eens_WS36": "bd2eb77df8308c6e2966c68745b3690bdaec80d78e6e311d2a1e267f9a22e587",
+  "B3_rule_resource_WS36": "976260a4dc546b81dbec3ce81e0bc35122dfd3bb7c713594e755134f99707d3c"
+ }
+}

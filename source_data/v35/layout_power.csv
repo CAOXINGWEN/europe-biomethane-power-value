@@ -1,0 +1,169 @@
+strategy,label,zone,power_MW
+rule_resource,Resource share,AT00,0.7791161215849592
+rule_resource,Resource share,BE00,0.7565058785869788
+rule_resource,Resource share,BG00,0.36532833931594544
+rule_resource,Resource share,HR00,0.23387507403929714
+rule_resource,Resource share,CZ00,0.699503646692153
+rule_resource,Resource share,DKE1,0.16279155653731905
+rule_resource,Resource share,DKW1,0.32356591432224197
+rule_resource,Resource share,FR00,4.387459759667342
+rule_resource,Resource share,DE00,7.0824454597257
+rule_resource,Resource share,GR00,0.9201244101417145
+rule_resource,Resource share,GR03,0.05518191030248547
+rule_resource,Resource share,ITCA,0.10593636403007299
+rule_resource,Resource share,ITCN,0.44526558495721336
+rule_resource,Resource share,ITCS,0.8847320417948273
+rule_resource,Resource share,ITN1,3.2139834841817647
+rule_resource,Resource share,ITS1,0.37969676504396094
+rule_resource,Resource share,ITSA,0.1426226782236493
+rule_resource,Resource share,ITSI,0.327062654939441
+rule_resource,Resource share,PT00,1.2618475380320586
+rule_resource,Resource share,RO00,2.0194929667271455
+rule_resource,Resource share,SI00,0.1084525142730461
+rule_resource,Resource share,ES00,1.3117756491940433
+rule_resource,Resource share,UK00,0.0
+rule_resource,Resource share,UKNI,0.0
+rule_eens,Shortage-energy share,AT00,1.630099425157332
+rule_eens,Shortage-energy share,BE00,0.0
+rule_eens,Shortage-energy share,BG00,0.0
+rule_eens,Shortage-energy share,HR00,0.0
+rule_eens,Shortage-energy share,CZ00,1.7505632962709452
+rule_eens,Shortage-energy share,DKE1,0.0
+rule_eens,Shortage-energy share,DKW1,1.4635654476270088
+rule_eens,Shortage-energy share,FR00,0.0
+rule_eens,Shortage-energy share,DE00,21.122538143258076
+rule_eens,Shortage-energy share,GR00,0.0
+rule_eens,Shortage-energy share,GR03,0.0
+rule_eens,Shortage-energy share,ITCA,0.0
+rule_eens,Shortage-energy share,ITCN,0.0
+rule_eens,Shortage-energy share,ITCS,0.0
+rule_eens,Shortage-energy share,ITN1,0.0
+rule_eens,Shortage-energy share,ITS1,0.0
+rule_eens,Shortage-energy share,ITSA,0.0
+rule_eens,Shortage-energy share,ITSI,0.0
+rule_eens,Shortage-energy share,PT00,0.0
+rule_eens,Shortage-energy share,RO00,0.0
+rule_eens,Shortage-energy share,SI00,0.0
+rule_eens,Shortage-energy share,ES00,0.0
+rule_eens,Shortage-energy share,UK00,0.0
+rule_eens,Shortage-energy share,UKNI,0.0
+rule_hours,Shortage-hour share,AT00,3.6444584297983664
+rule_hours,Shortage-hour share,BE00,0.0
+rule_hours,Shortage-hour share,BG00,0.0
+rule_hours,Shortage-hour share,HR00,0.0
+rule_hours,Shortage-hour share,CZ00,4.100015733523162
+rule_hours,Shortage-hour share,DKE1,0.0
+rule_hours,Shortage-hour share,DKW1,4.5555730372479575
+rule_hours,Shortage-hour share,FR00,0.0
+rule_hours,Shortage-hour share,DE00,13.666719111743873
+rule_hours,Shortage-hour share,GR00,0.0
+rule_hours,Shortage-hour share,GR03,0.0
+rule_hours,Shortage-hour share,ITCA,0.0
+rule_hours,Shortage-hour share,ITCN,0.0
+rule_hours,Shortage-hour share,ITCS,0.0
+rule_hours,Shortage-hour share,ITN1,0.0
+rule_hours,Shortage-hour share,ITS1,0.0
+rule_hours,Shortage-hour share,ITSA,0.0
+rule_hours,Shortage-hour share,ITSI,0.0
+rule_hours,Shortage-hour share,PT00,0.0
+rule_hours,Shortage-hour share,RO00,0.0
+rule_hours,Shortage-hour share,SI00,0.0
+rule_hours,Shortage-hour share,ES00,0.0
+rule_hours,Shortage-hour share,UK00,0.0
+rule_hours,Shortage-hour share,UKNI,0.0
+rule_germany,Germany first,AT00,0.0
+rule_germany,Germany first,BE00,0.0
+rule_germany,Germany first,BG00,0.0
+rule_germany,Germany first,HR00,0.0
+rule_germany,Germany first,CZ00,0.0
+rule_germany,Germany first,DKE1,0.0
+rule_germany,Germany first,DKW1,0.0
+rule_germany,Germany first,FR00,0.0
+rule_germany,Germany first,DE00,25.96676631231336
+rule_germany,Germany first,GR00,0.0
+rule_germany,Germany first,GR03,0.0
+rule_germany,Germany first,ITCA,0.0
+rule_germany,Germany first,ITCN,0.0
+rule_germany,Germany first,ITCS,0.0
+rule_germany,Germany first,ITN1,0.0
+rule_germany,Germany first,ITS1,0.0
+rule_germany,Germany first,ITSA,0.0
+rule_germany,Germany first,ITSI,0.0
+rule_germany,Germany first,PT00,0.0
+rule_germany,Germany first,RO00,0.0
+rule_germany,Germany first,SI00,0.0
+rule_germany,Germany first,ES00,0.0
+rule_germany,Germany first,UK00,0.0
+rule_germany,Germany first,UKNI,0.0
+rule_uniform,Uniform,AT00,1.1803075596506074
+rule_uniform,Uniform,BE00,1.1803075596506074
+rule_uniform,Uniform,BG00,1.1803075596506074
+rule_uniform,Uniform,HR00,1.1803075596506074
+rule_uniform,Uniform,CZ00,1.1803075596506074
+rule_uniform,Uniform,DKE1,1.1803075596506074
+rule_uniform,Uniform,DKW1,1.1803075596506074
+rule_uniform,Uniform,FR00,1.1803075596506074
+rule_uniform,Uniform,DE00,1.1803075596506074
+rule_uniform,Uniform,GR00,1.1803075596506074
+rule_uniform,Uniform,GR03,1.1803075596506074
+rule_uniform,Uniform,ITCA,1.1803075596506074
+rule_uniform,Uniform,ITCN,1.1803075596506074
+rule_uniform,Uniform,ITCS,1.1803075596506074
+rule_uniform,Uniform,ITN1,1.1803075596506074
+rule_uniform,Uniform,ITS1,1.1803075596506074
+rule_uniform,Uniform,ITSA,1.1803075596506074
+rule_uniform,Uniform,ITSI,1.1803075596506074
+rule_uniform,Uniform,PT00,1.1803075596506074
+rule_uniform,Uniform,RO00,1.1803075596506074
+rule_uniform,Uniform,SI00,1.1803075596506074
+rule_uniform,Uniform,ES00,1.1803075596506074
+rule_uniform,Uniform,UK00,0.0
+rule_uniform,Uniform,UKNI,0.0
+risk_only,"LP, constant gas",AT00,4.8697161442714005
+risk_only,"LP, constant gas",BE00,0.0
+risk_only,"LP, constant gas",BG00,0.0
+risk_only,"LP, constant gas",HR00,0.0
+risk_only,"LP, constant gas",CZ00,4.347214524786295
+risk_only,"LP, constant gas",DKE1,0.0
+risk_only,"LP, constant gas",DKW1,2.0473752975858246
+risk_only,"LP, constant gas",FR00,0.0
+risk_only,"LP, constant gas",DE00,14.702460345669842
+risk_only,"LP, constant gas",GR00,0.0
+risk_only,"LP, constant gas",GR03,0.0
+risk_only,"LP, constant gas",ITCA,0.0
+risk_only,"LP, constant gas",ITCN,0.0
+risk_only,"LP, constant gas",ITCS,0.0
+risk_only,"LP, constant gas",ITN1,0.0
+risk_only,"LP, constant gas",ITS1,0.0
+risk_only,"LP, constant gas",ITSA,0.0
+risk_only,"LP, constant gas",ITSI,0.0
+risk_only,"LP, constant gas",PT00,0.0
+risk_only,"LP, constant gas",RO00,0.0
+risk_only,"LP, constant gas",SI00,0.0
+risk_only,"LP, constant gas",ES00,0.0
+risk_only,"LP, constant gas",UK00,0.0
+risk_only,"LP, constant gas",UKNI,0.0
+recovery,"LP, measured gas",AT00,3.0049320881666137
+recovery,"LP, measured gas",BE00,0.0
+recovery,"LP, measured gas",BG00,0.0
+recovery,"LP, measured gas",HR00,0.0
+recovery,"LP, measured gas",CZ00,3.0696887022144135
+recovery,"LP, measured gas",DKE1,0.0
+recovery,"LP, measured gas",DKW1,2.521348773256431
+recovery,"LP, measured gas",FR00,0.0
+recovery,"LP, measured gas",DE00,17.3707967486759
+recovery,"LP, measured gas",GR00,0.0
+recovery,"LP, measured gas",GR03,0.0
+recovery,"LP, measured gas",ITCA,0.0
+recovery,"LP, measured gas",ITCN,0.0
+recovery,"LP, measured gas",ITCS,0.0
+recovery,"LP, measured gas",ITN1,0.0
+recovery,"LP, measured gas",ITS1,0.0
+recovery,"LP, measured gas",ITSA,0.0
+recovery,"LP, measured gas",ITSI,0.0
+recovery,"LP, measured gas",PT00,0.0
+recovery,"LP, measured gas",RO00,0.0
+recovery,"LP, measured gas",SI00,0.0
+recovery,"LP, measured gas",ES00,0.0
+recovery,"LP, measured gas",UK00,0.0
+recovery,"LP, measured gas",UKNI,0.0

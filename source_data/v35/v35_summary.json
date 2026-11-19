@@ -1,0 +1,308 @@
+{
+ "created_utc": "2026-11-02T14:52:29.767126+00:00",
+ "scenarios": {
+  "ext075": {
+   "ratio": {
+    "n_positive_holdout": 16,
+    "eens_mean_MWh": 362.46998616506016,
+    "resource_mean_MWh": 125.57795487543274,
+    "ratio": 2.88641415226592,
+    "bootstrap95": [
+     2.812267893757633,
+     2.9255809423145287
+    ],
+    "weathers_eens_higher": 13,
+    "share_of_baseline_33holdout_eens": 0.001654435879363692
+   },
+   "geography": {
+    "DE": 0.5120961857063698,
+    "UK": 0.40898860143692634,
+    "other": 0.07891521285670383,
+    "total_EENS_GWh": 3582.47221206616
+   },
+   "calibration": {
+    "mean_EENS_GWh": 99.51311700183778,
+    "mean_shortage_hours": 9.083333333333334,
+    "zero_weathers": 19,
+    "hours_ratio_to_official": 0.1975194297910039,
+    "EENS_ratio_to_official": 0.39760049681687776,
+    "spearman": 0.6183295818115421,
+    "criterion_met": false
+   }
+  },
+  "cut05ext075": {
+   "ratio": {
+    "n_positive_holdout": 29,
+    "eens_mean_MWh": 675.4577623975337,
+    "resource_mean_MWh": 287.5932399791026,
+    "ratio": 2.348656604190747,
+    "bootstrap95": [
+     2.072576331150638,
+     2.6712232563443834
+    ],
+    "weathers_eens_higher": 21,
+    "share_of_baseline_33holdout_eens": 0.0011564657377361837
+   },
+   "geography": {
+    "DE": 0.542458702950654,
+    "UK": 0.3765860371499742,
+    "other": 0.0809552598993718,
+    "total_EENS_GWh": 18096.888997694143
+   },
+   "calibration": {
+    "mean_EENS_GWh": 502.6913610470596,
+    "mean_shortage_hours": 35.166666666666664,
+    "zero_weathers": 4,
+    "hours_ratio_to_official": 0.7647082511174645,
+    "EENS_ratio_to_official": 2.008482307856684,
+    "spearman": 0.658081269719397,
+    "criterion_met": true
+   }
+  },
+  "uk": {
+   "ratio": {
+    "n_positive_holdout": 20,
+    "eens_mean_MWh": 790.5551620918708,
+    "resource_mean_MWh": 346.8034268896619,
+    "ratio": 2.279548299686761,
+    "bootstrap95": [
+     2.1747779758024106,
+     2.3867954321070037
+    ],
+    "weathers_eens_higher": 20,
+    "share_of_baseline_33holdout_eens": 0.0014327349783153827
+   },
+   "geography": {
+    "DE": 0.6236444773719644,
+    "UK": 0.276521639239042,
+    "other": 0.09983388338899363,
+    "total_EENS_GWh": 11711.053102685624
+   },
+   "calibration": null
+  },
+  "main": {
+   "geography": {
+    "DE": 0.6264924969548411,
+    "UK": 0.27555558299710853,
+    "other": 0.09795192004805037,
+    "total_EENS_GWh": 11711.053102685626
+   }
+  }
+ },
+ "boundary_geography": [
+  {
+   "boundary": "main",
+   "gas_cut": 0.3,
+   "external_availability": 0.5,
+   "mean_EENS_GWh": 325.30703063015625,
+   "mean_shortage_hours": 23.61111111111111,
+   "DE_share": 0.6271814881662189,
+   "UK_share": 0.2750944385398464,
+   "other_share": 0.09772407329393473,
+   "source": "V32 A-stage"
+  },
+  {
+   "boundary": "cut0.3_ext0.75",
+   "gas_cut": 0.3,
+   "external_availability": 0.75,
+   "mean_EENS_GWh": 99.51311700183777,
+   "mean_shortage_hours": 9.083333333333334,
+   "DE_share": 0.5120961857063698,
+   "UK_share": 0.40898860143692634,
+   "other_share": 0.07891521285670383,
+   "source": "V32 A-stage"
+  },
+  {
+   "boundary": "cut0.3_ext1",
+   "gas_cut": 0.3,
+   "external_availability": 1.0,
+   "mean_EENS_GWh": 22.322432848437987,
+   "mean_shortage_hours": 2.5555555555555554,
+   "DE_share": 0.15441855406345073,
+   "UK_share": 0.8421477365664559,
+   "other_share": 0.003433709370093352,
+   "source": "V32 A-stage"
+  },
+  {
+   "boundary": "cut0_ext0.5",
+   "gas_cut": 0.0,
+   "external_availability": 0.5,
+   "mean_EENS_GWh": 21.896676627227947,
+   "mean_shortage_hours": 2.2777777777777777,
+   "DE_share": 0.6368024838092265,
+   "UK_share": 0.2506379213531411,
+   "other_share": 0.11255959483763234,
+   "source": "V32 A-stage"
+  },
+  {
+   "boundary": "cut0_ext0.75",
+   "gas_cut": 0.0,
+   "external_availability": 0.75,
+   "mean_EENS_GWh": 3.7609849600857834,
+   "mean_shortage_hours": 0.4722222222222222,
+   "DE_share": 0.5927843463801279,
+   "UK_share": 0.399049509199726,
+   "other_share": 0.008166144420146126,
+   "source": "V32 A-stage"
+  },
+  {
+   "boundary": "cut0.5_ext0.75",
+   "gas_cut": 0.5,
+   "external_availability": 0.75,
+   "mean_EENS_GWh": 502.69136104705956,
+   "mean_shortage_hours": 35.166666666666664,
+   "DE_share": 0.542458702950654,
+   "UK_share": 0.3765860371499742,
+   "other_share": 0.0809552598993718,
+   "source": "V35"
+  },
+  {
+   "boundary": "main + UK resource",
+   "gas_cut": 0.3,
+   "external_availability": 0.5,
+   "mean_EENS_GWh": 325.30703063015625,
+   "mean_shortage_hours": 23.944444444444443,
+   "DE_share": 0.6236444773719644,
+   "UK_share": 0.276521639239042,
+   "other_share": 0.09983388338899363,
+   "source": "V35"
+  }
+ ],
+ "no_foresight": {
+  "eens": {
+   "lp_sum": 16433.05855314156,
+   "greedy_sum": 16344.644921084946,
+   "retained": 0.9946197701559512,
+   "min_weather_retained": 0.9761342273812745,
+   "weathers_full": 16,
+   "greedy_mean": 817.2322460542473,
+   "lp_mean": 821.652927657078
+  },
+  "resource": {
+   "lp_sum": 6060.724278297103,
+   "greedy_sum": 6060.724278302361,
+   "retained": 1.0000000000008675,
+   "min_weather_retained": 1.0000000000005247,
+   "weathers_full": 20,
+   "greedy_mean": 303.0362139151181,
+   "lp_mean": 303.0362139148552
+  },
+  "greedy_ratio": 2.6968138081449173
+ },
+ "uk_layouts": {
+  "eens": {
+   "DE_MW": 15.608627789814017,
+   "UK_MW": 7.0164299409753,
+   "total_MW": 25.96676631231336,
+   "zones": [
+    "AT00",
+    "BE00",
+    "BG00",
+    "HR00",
+    "CZ00",
+    "DKE1",
+    "DKW1",
+    "FR00",
+    "DE00",
+    "GR00",
+    "GR03",
+    "ITCA",
+    "ITCN",
+    "ITCS",
+    "ITN1",
+    "ITS1",
+    "ITSA",
+    "ITSI",
+    "PT00",
+    "RO00",
+    "SI00",
+    "ES00",
+    "UK00",
+    "UKNI"
+   ],
+   "power": [
+    1.2259973732375482,
+    0.0,
+    0.0,
+    0.0,
+    1.1629158011337932,
+    0.0,
+    0.9527954071527007,
+    0.0,
+    15.608627789814017,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    6.8410293545928385,
+    0.17540058638246175
+   ]
+  },
+  "resource": {
+   "DE_MW": 6.0958227658529625,
+   "UK_MW": 3.6173100203740534,
+   "total_MW": 25.966766312313364,
+   "zones": [
+    "AT00",
+    "BE00",
+    "BG00",
+    "HR00",
+    "CZ00",
+    "DKE1",
+    "DKW1",
+    "FR00",
+    "DE00",
+    "GR00",
+    "GR03",
+    "ITCA",
+    "ITCN",
+    "ITCS",
+    "ITN1",
+    "ITS1",
+    "ITSA",
+    "ITSI",
+    "PT00",
+    "RO00",
+    "SI00",
+    "ES00",
+    "UK00",
+    "UKNI"
+   ],
+   "power": [
+    0.6705810610484532,
+    0.6511205463445539,
+    0.31443613939240217,
+    0.2012950200324606,
+    0.6020590315238854,
+    0.14011381832331996,
+    0.27849144451525953,
+    3.7762630491586986,
+    6.0958227658529625,
+    0.7919461376235042,
+    0.047494773803478725,
+    0.09117885951376124,
+    0.38323769735575763,
+    0.7614841162873365,
+    2.7662583218409154,
+    0.3268029662406101,
+    0.12275457309011378,
+    0.28150107038273925,
+    1.0860653983305424,
+    1.7381667493323771,
+    0.09334449651310582,
+    1.1290382554330738,
+    3.5252390705169643,
+    0.09207094985708901
+   ]
+  }
+ }
+}

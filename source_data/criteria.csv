@@ -1,0 +1,12 @@
+spec,item,value,verdict
+main,T1,D 0.530/0.326/0.244/0.183; monotone weathers 36/36; D2028-D2035>0 in 36/36,True
+main,T2,net +0.0884 -> -0.0040; break-even 7.05% -> 2.29%,True
+main,T3,fossil-share term 92.2% of the 2028-2035 change,True
+main,T5,"h* 0.73 (2028), 1.48 (2035)",True
+main,E1,"injection minus U1 net: 2028 +0.096, 2030 +0.156, 2033 +0.179, 2035 +0.195",True
+registered,T1,D 0.532/0.326/0.244/0.183; monotone weathers 36/36; D2028-D2035>0 in 36/36,True
+registered,T2,net +0.0891 -> -0.0040; break-even 7.08% -> 2.30%,True
+registered,T3,fossil-share term 92.0% of the 2028-2035 change,True
+registered,T5,"h* 0.72 (2028), 1.48 (2035)",True
+registered,E1,"injection minus U1 net: 2028 +0.095, 2030 +0.156, 2033 +0.179, 2035 +0.195",True
+main,T4,adequacy/fuel-saving value 0.47 -> 0.91 -> 1.23 -> 1.50,True

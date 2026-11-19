@@ -1,0 +1,7 @@
+quantity,value,unit
+reported gas per tonne accepted,0.4,MWh reported/t wet
+reported raw gas per tonne accepted,80.0,m3 reported/t wet
+reported net all-energy balance,21800.0,MWh/year
+electricity per reported product,0.08,MWh/MWh
+natural gas per reported product,0.18333333333333332,MWh/MWh
+other fuel per reported product,0.01,MWh/MWh

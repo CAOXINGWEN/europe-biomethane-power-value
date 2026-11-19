@@ -1,0 +1,14 @@
+{
+ "utc": "2026-11-15T05:47:50.895563+00:00",
+ "partial": false,
+ "passed": true,
+ "successful_new_cases": 121,
+ "registered_new_cases": 121,
+ "cells_complete": 96,
+ "cells_registered": 96,
+ "sources_unchanged": true,
+ "max_balance_relative": 4.4493739901153086e-13,
+ "known_answer_shapley_passed": true,
+ "pilot_passed": true,
+ "missing_cells": 0
+}

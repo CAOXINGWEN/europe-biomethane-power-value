@@ -1,0 +1,39 @@
+{
+  "title": "Data and code for: Non-fossil sinks and spatial lock-in erode the climate value of European food-waste biomethane power",
+  "upload_type": "software",
+  "version": "v1.0.0",
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "description": "Complete source data, open-source 168-hour paired linear-programming dispatch benchmark, figure-reproduction scripts, independent numerical verification suite, and multi-stage model code for \"Non-fossil sinks and spatial lock-in erode the climate value of European food-waste biomethane power\".",
+  "creators": [
+    {
+      "name": "Cao, Xingwen",
+      "affiliation": "Peking University Shenzhen Graduate School"
+    },
+    {
+      "name": "Liu, Zhengguang",
+      "affiliation": "University of Manchester"
+    },
+    {
+      "name": "Li, Hailong",
+      "affiliation": "Mälardalen University"
+    },
+    {
+      "name": "Zhang, Haoran",
+      "affiliation": "Peking University Shenzhen Graduate School"
+    },
+    {
+      "name": "Wang, Lingyue",
+      "affiliation": "Xinjiang University of Finance and Economics"
+    }
+  ],
+  "keywords": [
+    "biomethane",
+    "food waste",
+    "anaerobic digestion",
+    "European power system",
+    "consequential LCA",
+    "spatial lock-in",
+    "energy decarbonization"
+  ]
+}

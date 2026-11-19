@@ -1,0 +1,18 @@
+test,ratio,n,wins,group,recovery_minus_eens_mean
+Held-out weather (20),2.711401772884939,20,19.0,main,
+Hydrogen 25% budget,2.7530081671823976,5,5.0,boundary,
+DSR detailed,2.8234367077331304,5,5.0,boundary,
+Gas resampling seed 1,,0,,gas_bootstrap,
+Gas resampling seed 2,2.752683610666943,23,,gas_bootstrap,-29.647940986152143
+Gas resampling seed 3,2.4815640842437547,23,,gas_bootstrap,-5.617232506580086
+Gas resampling seed 4,,0,,gas_bootstrap,
+Gas resampling seed 5,2.691158890642396,23,,gas_bootstrap,-22.834646921456425
+Gas resampling seed 6,,0,,gas_bootstrap,
+Gas resampling seed 7,2.7176813443304844,23,,gas_bootstrap,-9.72364472031993
+Gas resampling seed 8,2.7862746187026604,23,,gas_bootstrap,-31.703144361713424
+Gas resampling seed 9,2.4166803706561035,23,,gas_bootstrap,-2.1649644073862
+Gas resampling seed 10,2.786804305706769,23,,gas_bootstrap,-13.437744192708092
+Quiet-period dip 24 h at 0.75,2.717198818006346,22,,control_window,
+Quiet-period dip 24 h at 0.5,2.7179495737719392,22,,control_window,
+Quiet-period dip 48 h at 0.75,2.7178083987385238,22,,control_window,
+Quiet-period dip 72 h at 0.75,2.6496078571034403,5,,control_window,

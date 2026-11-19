@@ -1,0 +1,2468 @@
+{
+ "registered_utc": "2026-11-02T06:51:06.954097+00:00",
+ "purpose": "Review response V35: stress-boundary dependence (R1-M1), no-foresight dispatch (R1-M3), UK local resource (R1-M4).",
+ "scenarios": {
+  "main": {
+   "cut": 0.3,
+   "ext": 0.5,
+   "uk": false
+  },
+  "ext075": {
+   "cut": 0.3,
+   "ext": 0.75,
+   "uk": false
+  },
+  "cut05ext075": {
+   "cut": 0.5,
+   "ext": 0.75,
+   "uk": false
+  },
+  "uk": {
+   "cut": 0.3,
+   "ext": 0.5,
+   "uk": true
+  }
+ },
+ "train_weather": [
+  23,
+  11,
+  9
+ ],
+ "holdout_weather": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36
+ ],
+ "main_positive_holdout": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  10,
+  13,
+  14,
+  15,
+  17,
+  18,
+  19,
+  21,
+  25,
+  26,
+  27,
+  32,
+  33,
+  36
+ ],
+ "power_budget_MW": 25.96676631231336,
+ "buffer": "22 q per zone for both rules",
+ "rules": {
+  "resource": "power proportional to annual mean production q, local cap eta(12-beta)q",
+  "eens": "power proportional to summed zone EENS of the scenario's three training baselines, same cap"
+ },
+ "greedy_rule": "scripts/greedy.py: full boost in every paired-baseline shortfall hour from stock above a protective floor; no stock reserved for later shortfall",
+ "metric": "ratio of summed paired net reductions (rule_eens / rule_resource) over positive holdout weathers; zero-baseline weathers are analytic zero service",
+ "zero_baseline_rule": "ext075: V32 A2 baseline of the same electrical LP has EENS <= 0.001 MWh; uk: main V32 B0 baseline EENS <= 0.001 MWh, UK base supply only adds generation, and UK base-gas feasibility with 16q is checked by the protective-floor recursion.",
+ "reporting": "All registered scenarios are reported whether or not cut05ext075 meets the hour-ratio calibration criterion [0.5, 2] and Spearman >= 0.6.",
+ "code_sha256": {
+  "common35.py": "1e7215cdd71463556cfe01dbf7ac6cd261380713c37fd4d6c6322042210a4fac",
+  "designs.py": "929b408dd4477527e93f1c28ec02ed75f93fd57ad328bd21571a525b51351ddc",
+  "greedy.py": "6af4c13e24826561f339357de3647fb0d7331a92abd95bc0dedd78036ce79bd5",
+  "make_jobs.py": "436d374ef52f35019bbc2427ecbd95a4f9549d09a3b866fe2b2e0ebc64f6030e",
+  "queue35.py": "59003ffef6bd68a7b3dd91dac0527299092153174654848d7075af3f7fa80b02",
+  "run_case.py": "ae81eab4cdc9959543c73e1c447aaf314155a74e6c41469abcddc683f50c6990"
+ },
+ "v32_model_sha256": "ef4fff65a710999b56c26b29e51bbbb6e4bd58b6def5c0247ee5129b080cc7a3",
+ "jobs": [
+  {
+   "name": "main_eval_rule_eens_WS13",
+   "scenario": "main",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 13,
+   "purpose": "pipeline reproduction of V32 B3_rule_eens_WS13"
+  },
+  {
+   "name": "main_greedy_rule_eens_WS02",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 2
+  },
+  {
+   "name": "main_greedy_rule_eens_WS03",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 3
+  },
+  {
+   "name": "main_greedy_rule_eens_WS04",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 4
+  },
+  {
+   "name": "main_greedy_rule_eens_WS05",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 5
+  },
+  {
+   "name": "main_greedy_rule_eens_WS06",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 6
+  },
+  {
+   "name": "main_greedy_rule_eens_WS07",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 7
+  },
+  {
+   "name": "main_greedy_rule_eens_WS10",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 10
+  },
+  {
+   "name": "main_greedy_rule_eens_WS13",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 13
+  },
+  {
+   "name": "main_greedy_rule_eens_WS14",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 14
+  },
+  {
+   "name": "main_greedy_rule_eens_WS15",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 15
+  },
+  {
+   "name": "main_greedy_rule_eens_WS17",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 17
+  },
+  {
+   "name": "main_greedy_rule_eens_WS18",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 18
+  },
+  {
+   "name": "main_greedy_rule_eens_WS19",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 19
+  },
+  {
+   "name": "main_greedy_rule_eens_WS21",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 21
+  },
+  {
+   "name": "main_greedy_rule_eens_WS25",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 25
+  },
+  {
+   "name": "main_greedy_rule_eens_WS26",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 26
+  },
+  {
+   "name": "main_greedy_rule_eens_WS27",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 27
+  },
+  {
+   "name": "main_greedy_rule_eens_WS32",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 32
+  },
+  {
+   "name": "main_greedy_rule_eens_WS33",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 33
+  },
+  {
+   "name": "main_greedy_rule_eens_WS36",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "eens",
+   "weather": 36
+  },
+  {
+   "name": "main_greedy_rule_resource_WS02",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 2
+  },
+  {
+   "name": "main_greedy_rule_resource_WS03",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 3
+  },
+  {
+   "name": "main_greedy_rule_resource_WS04",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 4
+  },
+  {
+   "name": "main_greedy_rule_resource_WS05",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 5
+  },
+  {
+   "name": "main_greedy_rule_resource_WS06",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 6
+  },
+  {
+   "name": "main_greedy_rule_resource_WS07",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 7
+  },
+  {
+   "name": "main_greedy_rule_resource_WS10",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 10
+  },
+  {
+   "name": "main_greedy_rule_resource_WS13",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 13
+  },
+  {
+   "name": "main_greedy_rule_resource_WS14",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 14
+  },
+  {
+   "name": "main_greedy_rule_resource_WS15",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 15
+  },
+  {
+   "name": "main_greedy_rule_resource_WS17",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 17
+  },
+  {
+   "name": "main_greedy_rule_resource_WS18",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 18
+  },
+  {
+   "name": "main_greedy_rule_resource_WS19",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 19
+  },
+  {
+   "name": "main_greedy_rule_resource_WS21",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 21
+  },
+  {
+   "name": "main_greedy_rule_resource_WS25",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 25
+  },
+  {
+   "name": "main_greedy_rule_resource_WS26",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 26
+  },
+  {
+   "name": "main_greedy_rule_resource_WS27",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 27
+  },
+  {
+   "name": "main_greedy_rule_resource_WS32",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 32
+  },
+  {
+   "name": "main_greedy_rule_resource_WS33",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 33
+  },
+  {
+   "name": "main_greedy_rule_resource_WS36",
+   "scenario": "main",
+   "kind": "greedy",
+   "rule": "resource",
+   "weather": 36
+  },
+  {
+   "name": "cut05ext075_baseline_WS23",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 23
+  },
+  {
+   "name": "cut05ext075_baseline_WS11",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 11
+  },
+  {
+   "name": "cut05ext075_baseline_WS09",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 9
+  },
+  {
+   "name": "cut05ext075_baseline_WS01",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 1
+  },
+  {
+   "name": "cut05ext075_baseline_WS02",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 2
+  },
+  {
+   "name": "cut05ext075_baseline_WS03",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 3
+  },
+  {
+   "name": "cut05ext075_baseline_WS04",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 4
+  },
+  {
+   "name": "cut05ext075_baseline_WS05",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 5
+  },
+  {
+   "name": "cut05ext075_baseline_WS06",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 6
+  },
+  {
+   "name": "cut05ext075_baseline_WS07",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 7
+  },
+  {
+   "name": "cut05ext075_baseline_WS08",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 8
+  },
+  {
+   "name": "cut05ext075_baseline_WS10",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 10
+  },
+  {
+   "name": "cut05ext075_baseline_WS12",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 12
+  },
+  {
+   "name": "cut05ext075_baseline_WS13",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 13
+  },
+  {
+   "name": "cut05ext075_baseline_WS14",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 14
+  },
+  {
+   "name": "cut05ext075_baseline_WS15",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 15
+  },
+  {
+   "name": "cut05ext075_baseline_WS16",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 16
+  },
+  {
+   "name": "cut05ext075_baseline_WS17",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 17
+  },
+  {
+   "name": "cut05ext075_baseline_WS18",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 18
+  },
+  {
+   "name": "cut05ext075_baseline_WS19",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 19
+  },
+  {
+   "name": "cut05ext075_baseline_WS20",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 20
+  },
+  {
+   "name": "cut05ext075_baseline_WS21",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 21
+  },
+  {
+   "name": "cut05ext075_baseline_WS22",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 22
+  },
+  {
+   "name": "cut05ext075_baseline_WS24",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 24
+  },
+  {
+   "name": "cut05ext075_baseline_WS25",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 25
+  },
+  {
+   "name": "cut05ext075_baseline_WS26",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 26
+  },
+  {
+   "name": "cut05ext075_baseline_WS27",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 27
+  },
+  {
+   "name": "cut05ext075_baseline_WS28",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 28
+  },
+  {
+   "name": "cut05ext075_baseline_WS29",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 29
+  },
+  {
+   "name": "cut05ext075_baseline_WS30",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 30
+  },
+  {
+   "name": "cut05ext075_baseline_WS31",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 31
+  },
+  {
+   "name": "cut05ext075_baseline_WS32",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 32
+  },
+  {
+   "name": "cut05ext075_baseline_WS33",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 33
+  },
+  {
+   "name": "cut05ext075_baseline_WS34",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 34
+  },
+  {
+   "name": "cut05ext075_baseline_WS35",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 35
+  },
+  {
+   "name": "cut05ext075_baseline_WS36",
+   "scenario": "cut05ext075",
+   "kind": "baseline",
+   "weather": 36
+  },
+  {
+   "name": "ext075_baseline_WS23",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 23
+  },
+  {
+   "name": "ext075_baseline_WS11",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 11
+  },
+  {
+   "name": "ext075_baseline_WS09",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 9
+  },
+  {
+   "name": "ext075_baseline_WS01",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 1
+  },
+  {
+   "name": "ext075_baseline_WS02",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 2
+  },
+  {
+   "name": "ext075_baseline_WS03",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 3
+  },
+  {
+   "name": "ext075_baseline_WS04",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 4
+  },
+  {
+   "name": "ext075_baseline_WS05",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 5
+  },
+  {
+   "name": "ext075_baseline_WS06",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 6
+  },
+  {
+   "name": "ext075_baseline_WS07",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 7
+  },
+  {
+   "name": "ext075_baseline_WS08",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 8
+  },
+  {
+   "name": "ext075_baseline_WS10",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 10
+  },
+  {
+   "name": "ext075_baseline_WS12",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 12
+  },
+  {
+   "name": "ext075_baseline_WS13",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 13
+  },
+  {
+   "name": "ext075_baseline_WS14",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 14
+  },
+  {
+   "name": "ext075_baseline_WS15",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 15
+  },
+  {
+   "name": "ext075_baseline_WS16",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 16
+  },
+  {
+   "name": "ext075_baseline_WS17",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 17
+  },
+  {
+   "name": "ext075_baseline_WS18",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 18
+  },
+  {
+   "name": "ext075_baseline_WS19",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 19
+  },
+  {
+   "name": "ext075_baseline_WS20",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 20
+  },
+  {
+   "name": "ext075_baseline_WS21",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 21
+  },
+  {
+   "name": "ext075_baseline_WS22",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 22
+  },
+  {
+   "name": "ext075_baseline_WS24",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 24
+  },
+  {
+   "name": "ext075_baseline_WS25",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 25
+  },
+  {
+   "name": "ext075_baseline_WS26",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 26
+  },
+  {
+   "name": "ext075_baseline_WS27",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 27
+  },
+  {
+   "name": "ext075_baseline_WS28",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 28
+  },
+  {
+   "name": "ext075_baseline_WS29",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 29
+  },
+  {
+   "name": "ext075_baseline_WS30",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 30
+  },
+  {
+   "name": "ext075_baseline_WS31",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 31
+  },
+  {
+   "name": "ext075_baseline_WS32",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 32
+  },
+  {
+   "name": "ext075_baseline_WS33",
+   "scenario": "ext075",
+   "kind": "reuse_baseline",
+   "weather": 33
+  },
+  {
+   "name": "ext075_baseline_WS34",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 34
+  },
+  {
+   "name": "ext075_baseline_WS35",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 35
+  },
+  {
+   "name": "ext075_baseline_WS36",
+   "scenario": "ext075",
+   "kind": "zero_baseline",
+   "weather": 36
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS01",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 1
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS01",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 1
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS02",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 2
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS02",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 2
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS03",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 3
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS03",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 3
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS04",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 4
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS04",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 4
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS05",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 5
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS05",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 5
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS06",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 6
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS06",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 6
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS07",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 7
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS07",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 7
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS08",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 8
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS08",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 8
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS10",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 10
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS10",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 10
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS12",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 12
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS12",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 12
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS13",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 13
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS13",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 13
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS14",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 14
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS14",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 14
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS15",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 15
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS15",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 15
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS16",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 16
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS16",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 16
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS17",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 17
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS17",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 17
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS18",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 18
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS18",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 18
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS19",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 19
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS19",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 19
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS20",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 20
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS20",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 20
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS21",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 21
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS21",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 21
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS22",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 22
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS22",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 22
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS24",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 24
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS24",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 24
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS25",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 25
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS25",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 25
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS26",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 26
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS26",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 26
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS27",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 27
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS27",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 27
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS28",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 28
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS28",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 28
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS29",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 29
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS29",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 29
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS30",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 30
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS30",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 30
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS31",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 31
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS31",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 31
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS32",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 32
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS32",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 32
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS33",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 33
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS33",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 33
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS34",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 34
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS34",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 34
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS35",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 35
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS35",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 35
+  },
+  {
+   "name": "ext075_eval_rule_eens_WS36",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 36
+  },
+  {
+   "name": "ext075_eval_rule_resource_WS36",
+   "scenario": "ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 36
+  },
+  {
+   "name": "uk_baseline_WS23",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 23
+  },
+  {
+   "name": "uk_baseline_WS11",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 11
+  },
+  {
+   "name": "uk_baseline_WS09",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 9
+  },
+  {
+   "name": "uk_baseline_WS01",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 1
+  },
+  {
+   "name": "uk_baseline_WS02",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 2
+  },
+  {
+   "name": "uk_baseline_WS03",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 3
+  },
+  {
+   "name": "uk_baseline_WS04",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 4
+  },
+  {
+   "name": "uk_baseline_WS05",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 5
+  },
+  {
+   "name": "uk_baseline_WS06",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 6
+  },
+  {
+   "name": "uk_baseline_WS07",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 7
+  },
+  {
+   "name": "uk_baseline_WS08",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 8
+  },
+  {
+   "name": "uk_baseline_WS10",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 10
+  },
+  {
+   "name": "uk_baseline_WS12",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 12
+  },
+  {
+   "name": "uk_baseline_WS13",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 13
+  },
+  {
+   "name": "uk_baseline_WS14",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 14
+  },
+  {
+   "name": "uk_baseline_WS15",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 15
+  },
+  {
+   "name": "uk_baseline_WS16",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 16
+  },
+  {
+   "name": "uk_baseline_WS17",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 17
+  },
+  {
+   "name": "uk_baseline_WS18",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 18
+  },
+  {
+   "name": "uk_baseline_WS19",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 19
+  },
+  {
+   "name": "uk_baseline_WS20",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 20
+  },
+  {
+   "name": "uk_baseline_WS21",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 21
+  },
+  {
+   "name": "uk_baseline_WS22",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 22
+  },
+  {
+   "name": "uk_baseline_WS24",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 24
+  },
+  {
+   "name": "uk_baseline_WS25",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 25
+  },
+  {
+   "name": "uk_baseline_WS26",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 26
+  },
+  {
+   "name": "uk_baseline_WS27",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 27
+  },
+  {
+   "name": "uk_baseline_WS28",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 28
+  },
+  {
+   "name": "uk_baseline_WS29",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 29
+  },
+  {
+   "name": "uk_baseline_WS30",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 30
+  },
+  {
+   "name": "uk_baseline_WS31",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 31
+  },
+  {
+   "name": "uk_baseline_WS32",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 32
+  },
+  {
+   "name": "uk_baseline_WS33",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 33
+  },
+  {
+   "name": "uk_baseline_WS34",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 34
+  },
+  {
+   "name": "uk_baseline_WS35",
+   "scenario": "uk",
+   "kind": "zero_baseline",
+   "weather": 35
+  },
+  {
+   "name": "uk_baseline_WS36",
+   "scenario": "uk",
+   "kind": "baseline",
+   "weather": 36
+  },
+  {
+   "name": "uk_eval_rule_eens_WS01",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 1
+  },
+  {
+   "name": "uk_eval_rule_resource_WS01",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 1
+  },
+  {
+   "name": "uk_eval_rule_eens_WS02",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 2
+  },
+  {
+   "name": "uk_eval_rule_resource_WS02",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 2
+  },
+  {
+   "name": "uk_eval_rule_eens_WS03",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 3
+  },
+  {
+   "name": "uk_eval_rule_resource_WS03",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 3
+  },
+  {
+   "name": "uk_eval_rule_eens_WS04",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 4
+  },
+  {
+   "name": "uk_eval_rule_resource_WS04",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 4
+  },
+  {
+   "name": "uk_eval_rule_eens_WS05",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 5
+  },
+  {
+   "name": "uk_eval_rule_resource_WS05",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 5
+  },
+  {
+   "name": "uk_eval_rule_eens_WS06",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 6
+  },
+  {
+   "name": "uk_eval_rule_resource_WS06",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 6
+  },
+  {
+   "name": "uk_eval_rule_eens_WS07",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 7
+  },
+  {
+   "name": "uk_eval_rule_resource_WS07",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 7
+  },
+  {
+   "name": "uk_eval_rule_eens_WS08",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 8
+  },
+  {
+   "name": "uk_eval_rule_resource_WS08",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 8
+  },
+  {
+   "name": "uk_eval_rule_eens_WS10",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 10
+  },
+  {
+   "name": "uk_eval_rule_resource_WS10",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 10
+  },
+  {
+   "name": "uk_eval_rule_eens_WS12",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 12
+  },
+  {
+   "name": "uk_eval_rule_resource_WS12",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 12
+  },
+  {
+   "name": "uk_eval_rule_eens_WS13",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 13
+  },
+  {
+   "name": "uk_eval_rule_resource_WS13",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 13
+  },
+  {
+   "name": "uk_eval_rule_eens_WS14",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 14
+  },
+  {
+   "name": "uk_eval_rule_resource_WS14",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 14
+  },
+  {
+   "name": "uk_eval_rule_eens_WS15",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 15
+  },
+  {
+   "name": "uk_eval_rule_resource_WS15",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 15
+  },
+  {
+   "name": "uk_eval_rule_eens_WS16",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 16
+  },
+  {
+   "name": "uk_eval_rule_resource_WS16",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 16
+  },
+  {
+   "name": "uk_eval_rule_eens_WS17",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 17
+  },
+  {
+   "name": "uk_eval_rule_resource_WS17",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 17
+  },
+  {
+   "name": "uk_eval_rule_eens_WS18",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 18
+  },
+  {
+   "name": "uk_eval_rule_resource_WS18",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 18
+  },
+  {
+   "name": "uk_eval_rule_eens_WS19",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 19
+  },
+  {
+   "name": "uk_eval_rule_resource_WS19",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 19
+  },
+  {
+   "name": "uk_eval_rule_eens_WS20",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 20
+  },
+  {
+   "name": "uk_eval_rule_resource_WS20",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 20
+  },
+  {
+   "name": "uk_eval_rule_eens_WS21",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 21
+  },
+  {
+   "name": "uk_eval_rule_resource_WS21",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 21
+  },
+  {
+   "name": "uk_eval_rule_eens_WS22",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 22
+  },
+  {
+   "name": "uk_eval_rule_resource_WS22",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 22
+  },
+  {
+   "name": "uk_eval_rule_eens_WS24",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 24
+  },
+  {
+   "name": "uk_eval_rule_resource_WS24",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 24
+  },
+  {
+   "name": "uk_eval_rule_eens_WS25",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 25
+  },
+  {
+   "name": "uk_eval_rule_resource_WS25",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 25
+  },
+  {
+   "name": "uk_eval_rule_eens_WS26",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 26
+  },
+  {
+   "name": "uk_eval_rule_resource_WS26",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 26
+  },
+  {
+   "name": "uk_eval_rule_eens_WS27",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 27
+  },
+  {
+   "name": "uk_eval_rule_resource_WS27",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 27
+  },
+  {
+   "name": "uk_eval_rule_eens_WS28",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 28
+  },
+  {
+   "name": "uk_eval_rule_resource_WS28",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 28
+  },
+  {
+   "name": "uk_eval_rule_eens_WS29",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 29
+  },
+  {
+   "name": "uk_eval_rule_resource_WS29",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 29
+  },
+  {
+   "name": "uk_eval_rule_eens_WS30",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 30
+  },
+  {
+   "name": "uk_eval_rule_resource_WS30",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 30
+  },
+  {
+   "name": "uk_eval_rule_eens_WS31",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 31
+  },
+  {
+   "name": "uk_eval_rule_resource_WS31",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 31
+  },
+  {
+   "name": "uk_eval_rule_eens_WS32",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 32
+  },
+  {
+   "name": "uk_eval_rule_resource_WS32",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 32
+  },
+  {
+   "name": "uk_eval_rule_eens_WS33",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 33
+  },
+  {
+   "name": "uk_eval_rule_resource_WS33",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 33
+  },
+  {
+   "name": "uk_eval_rule_eens_WS34",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 34
+  },
+  {
+   "name": "uk_eval_rule_resource_WS34",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 34
+  },
+  {
+   "name": "uk_eval_rule_eens_WS35",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 35
+  },
+  {
+   "name": "uk_eval_rule_resource_WS35",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 35
+  },
+  {
+   "name": "uk_eval_rule_eens_WS36",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 36
+  },
+  {
+   "name": "uk_eval_rule_resource_WS36",
+   "scenario": "uk",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 36
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS01",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 1
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS01",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 1
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS02",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 2
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS02",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 2
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS03",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 3
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS03",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 3
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS04",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 4
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS04",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 4
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS05",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 5
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS05",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 5
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS06",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 6
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS06",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 6
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS07",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 7
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS07",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 7
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS08",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 8
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS08",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 8
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS10",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 10
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS10",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 10
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS12",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 12
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS12",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 12
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS13",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 13
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS13",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 13
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS14",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 14
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS14",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 14
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS15",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 15
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS15",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 15
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS16",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 16
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS16",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 16
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS17",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 17
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS17",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 17
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS18",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 18
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS18",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 18
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS19",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 19
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS19",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 19
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS20",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 20
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS20",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 20
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS21",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 21
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS21",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 21
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS22",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 22
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS22",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 22
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS24",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 24
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS24",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 24
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS25",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 25
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS25",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 25
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS26",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 26
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS26",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 26
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS27",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 27
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS27",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 27
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS28",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 28
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS28",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 28
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS29",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 29
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS29",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 29
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS30",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 30
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS30",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 30
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS31",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 31
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS31",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 31
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS32",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 32
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS32",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 32
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS33",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 33
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS33",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 33
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS34",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 34
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS34",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 34
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS35",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 35
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS35",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 35
+  },
+  {
+   "name": "cut05ext075_eval_rule_eens_WS36",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "eens",
+   "weather": 36
+  },
+  {
+   "name": "cut05ext075_eval_rule_resource_WS36",
+   "scenario": "cut05ext075",
+   "kind": "eval",
+   "rule": "resource",
+   "weather": 36
+  }
+ ],
+ "amendments": [
+  {
+   "id": "amendment_01",
+   "registered_utc": "2026-11-02T07:32:48.696724Z",
+   "change": "17 ext075 baseline LPs replaced by the V32 A-stage baselines of the identical electrical LP (cut 0.3, ext 0.75)",
+   "reason": "CPU contention (about 6 min per LP) and earlyoom terminations; V32 B0 asserted that the gas-profile split does not change the electrical baseline optimum",
+   "results_read_before_change": "none for ext075"
+  },
+  {
+   "id": "amendment_02",
+   "registered_utc": "2026-11-02T07:44:29.938193Z",
+   "change": "greedy.py: when stock is below the protective floor, the boost now reserves the compression fuel needed to refill to the floor (1 + kappa/eta per MWh stored). main_greedy_rule_eens_WS21 failed on the old rule with an inventory-floor exception and is re-run; WS13 was terminated three times by earlyoom without a receipt and is re-run.",
+   "effect_on_completed_runs": "none: runs without an exception never entered the corrected branch (otherwise the floor check would have raised); profiles for WS03 and WS05 recomputed identically",
+   "failed_receipts_retained": [
+    "results/main_greedy_rule_eens_WS21.attempt_failed_*.json",
+    "results/main_greedy_rule_eens_WS13.attempt_failed_*.json"
+   ]
+  },
+  {
+   "id": "amendment_03",
+   "registered_utc": "2026-11-02T08:03:16.276221Z",
+   "change": "execution order only: cut05ext075 baselines (calibration) moved before ext075, uk and cut05ext075 evaluations; no case definitions changed",
+   "reason": "calibration of the new boundary is needed early given about 6 to 8 min per LP under CPU contention"
+  },
+  {
+   "id": "amendment_04",
+   "registered_utc": "2026-11-02T11:45:00.523866Z",
+   "change": "server reboot at about 10:43 UTC stopped the queue; three cases that had been terminated three times by earlyoom before the reboot (cut05ext075_baseline_WS19, ext075_eval_rule_eens_WS06, ext075_eval_rule_resource_WS06) are re-run; their failure receipts are retained as *.attempt_failed_*.json",
+   "reason": "no scientific failure; processes were killed for memory without writing a receipt"
+  },
+  {
+   "id": "amendment_05",
+   "registered_utc": "2026-11-02T14:38:53.135763Z",
+   "change": "queue35.py lock changed to re-entrant: workers deadlocked from about 11:58 UTC when the uk and cut05ext075 designs had to be created inside next_job(); designs generated by designs.py on the registered training baselines, queue relaunched",
+   "effect_on_results": "none; no case ran during the deadlock"
+  }
+ ]
+}

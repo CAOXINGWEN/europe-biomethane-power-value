@@ -1,0 +1,8 @@
+variant,crossing_year
+"Main: 2.5% leakage, GWP100, no heat use",2034.467975462552
+Leakage 1.0%,inf
+Leakage 4.2%,2029.9748373794905
+GWP20,2028.3651722415427
+Heat use h = 0.25,inf
+Heat use h = 0.50,inf
+Registered specification (no electrolysers),2034.468844285479

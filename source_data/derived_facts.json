@@ -1,0 +1,24 @@
+{
+  "mechanism_start": 0.5058718596460083,
+  "mechanism_end": 0.1842892630575593,
+  "mechanism_delta": -0.321582596588449,
+  "V_effect": -0.27788153956608846,
+  "C_effect": -0.09238625246097013,
+  "B_effect": 0.04868519543860968,
+  "V_fraction_net_decline": 0.8641062747612311,
+  "C_fraction_net_decline": 0.2872862320320246,
+  "B_fraction_net_decline": -0.15139250679325603,
+  "scale_four_cells": {
+    "fleet_large": 0.1334722110247144,
+    "fleet_small": 0.1411890328704655,
+    "food_large": 0.1692360917013318,
+    "food_small": 0.1842892630575593
+  },
+  "scale_delta": -0.050817052032844895,
+  "scale_mix_effect": -0.03943205543185555,
+  "scale_total_effect": -0.01138499660098925,
+  "scale_mix_fraction": 0.7759610968060325,
+  "scale_total_fraction": 0.22403890319396558,
+  "food_fixed_mix_scale_drop_fraction": 0.0816823026283735,
+  "fleet_fixed_mix_scale_drop_fraction": 0.05465595796545275
+}

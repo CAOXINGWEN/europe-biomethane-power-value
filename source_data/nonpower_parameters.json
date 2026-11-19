@@ -1,0 +1,126 @@
+{
+ "currency": "EUR2024-equivalent engineering budget; HICP EA20 indexation where a reference year is identified",
+ "GWP100": {
+  "bio_CH4": 27.0,
+  "fossil_CH4": 29.8,
+  "N2O": 273.0
+ },
+ "GWP20": {
+  "bio_CH4": 79.7,
+  "fossil_CH4": 82.5,
+  "N2O": 273.0
+ },
+ "methane_mass_t_per_MWh": 0.072,
+ "gas_combustion_t_per_MWh": 0.20196,
+ "diesel_combustion_t_per_MWh": 0.26352,
+ "diesel_upstream_t_per_MWh": 0.07884,
+ "gas_upstream_inventory_g_per_MJ": {
+  "CO2": 5.4,
+  "CH4": 0.2,
+  "N2O": 0.00017
+ },
+ "grid_compression_MWh_per_MWh": 0.03,
+ "vehicle_CNG_compression_MWh_per_MWh": 0.03,
+ "liquefaction_MWh_per_MWh": 0.0605,
+ "vehicle_energy_MJ_per_tkm": {
+  "diesel_B0": 0.6603,
+  "CNG_PI": 0.8299,
+  "LNG_PI": 0.8303
+ },
+ "vehicle_reference": "JEC TTW v5, PDF page 62 Table 45, 2025 long haul; alternative regional/urban cases in parameter_source_cells.csv",
+ "vehicle_nonCO2": {
+  "inventories": {
+   "diesel_B0": {
+    "CH4_t_per_MWh": 0.0,
+    "N2O_t_per_MWh": 3.604218948677993e-05,
+    "printed_CO2_g_per_tkm": 48.34,
+    "printed_CO2eq_AR4_g_per_tkm": 50.31
+   },
+   "CNG": {
+    "CH4_t_per_MWh": 7.33438777528909e-05,
+    "N2O_t_per_MWh": 3.3087915351727954e-06,
+    "reconstructed_positive_engine_work_kWh_per_km": 1.0899959860588946,
+    "printed_CO2_g_per_tkm": 46.61,
+    "printed_CO2eq_AR4_g_per_tkm": 47.26,
+    "printed_difference_rounding_interval_g_per_tkm": [
+     0.6399999999999986,
+     0.6599999999999986
+    ],
+    "boil_off_CH4_g_per_km": 0.0
+   },
+   "LNG": {
+    "CH4_t_per_MWh": 0.00010582283539181164,
+    "N2O_t_per_MWh": 3.343913432900279e-06,
+    "reconstructed_positive_engine_work_kWh_per_km": 1.1020969280690884,
+    "printed_CO2_g_per_tkm": 46.84,
+    "printed_CO2eq_AR4_g_per_tkm": 47.68,
+    "printed_difference_rounding_interval_g_per_tkm": [
+     0.8299999999999963,
+     0.8499999999999963
+    ],
+    "boil_off_CH4_g_per_km": 0.10474137931034483
+   }
+  },
+  "source": "JEC TTW v5 PDF page 62 Table 45; PDF page 51 Tables 33/34; PDF page 52 Tables 35/36; PDF page 50 equations; PDF page 17 Table 7",
+  "payload_t": 14.29,
+  "engine_power_kW": 325,
+  "cold_starts_per_day": 1.5,
+  "longhaul_km_per_day": 640,
+  "original_GWP": {
+   "CH4": 25,
+   "N2O": 298
+  },
+  "reconstruction_note": "Aggregate CO2 and CO2eq printed to .01 g/tkm. Diesel non-CO2 is N2O; gas hot CH4:N2O ratio and cold/boil-off inventories separate CH4 from N2O. Derived inventories inherit printed-cell rounding, not unrounded simulation precision."
+ },
+ "vehicle_primary_methane_boundary": "Full-chain lambda includes vehicle methane; explicit vehicle methane inventory not subtracted again. N2O and avoided fossil-vehicle methane are separate.",
+ "gate_cost_EUR_per_MWh": {
+  "low": 63.174538368748266,
+  "central": 98.27150412916397,
+  "high": 106.46079613992764
+ },
+ "gate_cost_source": "BIP TF4 2023: PDF page 14 identifies price year 2021; cost categories 54/84/91 are plant-scale/feedstock proxies, not measured country-specific food-waste costs",
+ "injection_all_in_EUR_per_MWh": {
+  "low": 3.6095047237331803,
+  "central": 6.015841206221967,
+  "high": 8.422177688710754
+ },
+ "injection_source": "BIP TF4 conclusion, Navigant 2019 cited benchmark ~5 EUR/MWh. 3/7 are declared engineering uncertainty endpoints.",
+ "liquefaction_all_in_EUR_per_MWh": {
+  "low": 10.529089728124712,
+  "central": 14.038786304166281,
+  "high": 17.548482880207853
+ },
+ "liquefaction_source": "BIP TF4 conclusion cites DNV 2021 9–15 EUR/MWh; tariff includes electricity, which is not added again to cost.",
+ "station_capex_EUR_per_annual_MWh": {
+  "CNG": 94.34301107452858,
+  "LNG": 62.895340716352386
+ },
+ "station_source": "IEA Bioenergy Task 37 (2022) PDF page 42, Borjesson et al. 2016 benchmarks; publication year used as an explicit price-year proxy for indexation",
+ "station_FOM_fraction": 0.03,
+ "station_lifetime_years": 20,
+ "station_FOM_status": "engineering assumption, not a quoted observation",
+ "discount_rates": {
+  "low": 0.04,
+  "central": 0.07,
+  "high": 0.1
+ },
+ "electricity_budget_EUR_per_MWh": {
+  "low": 50.0,
+  "central": 100.0,
+  "high": 200.0
+ },
+ "electricity_price_status": "Engineering process-electricity budget grid, independent of ETS prices; dispatch duals retained separately",
+ "HICP_factors_to_2024": {
+  "2016": 1.2579068143270478,
+  "2019": 1.2031682412443934,
+  "2020": 1.2001903855306997,
+  "2021": 1.1698988586805235
+ },
+ "notes": [
+  "GWP20 uses corrected AR6 biogenic methane 79.7, not superseded 80.8.",
+  "Delivered methane output is not reduced by externally supplied electricity; net fossil-energy accounting and process electricity are separate columns.",
+  "Identical compression and an existing shared CNG station cancel versus fossil CNG; dedicated new-station cost boundary retained separately.",
+  "All-in injection/liquefaction fees are not charged a second time for their electricity.",
+  "Historical station costs, uniform fee assumptions and common gate-cost proxies are supplied as scenario inputs, not national empirical estimates."
+ ]
+}

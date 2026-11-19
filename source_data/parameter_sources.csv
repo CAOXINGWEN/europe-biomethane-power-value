@@ -1,0 +1,23 @@
+parameter,value,unit,source_file,source_sha256,pdf_page,table,printed_cell,note
+regional_2025_diesel_B0,2.707,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,61,39,2.707,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+regional_2025_CNG_PI,3.334,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,61,39,3.334,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+regional_2025_LNG_PI,3.286,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,61,39,3.286,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2025_diesel_B0,0.6603,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,45,0.6603,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2025_CNG_PI,0.8299,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,45,0.8299,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2025_LNG_PI,0.8303,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,45,0.8303,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+regional_2016_diesel_B0,2.989,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,60,38,2.989,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+regional_2016_CNG_PI,3.655,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,60,38,3.655,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+regional_2016_LNG_PI,3.602,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,60,38,3.602,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2016_diesel_B0,0.7292,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,44,0.7292,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2016_CNG_PI,0.9097,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,44,0.9097,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+longhaul_2016_LNG_PI,0.9103,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,62,44,0.9103,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+urban_rigid_2025_diesel_B0,3.065,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,71,51,3.065,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+urban_rigid_2025_CNG_PI,3.749,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,71,51,3.749,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+urban_rigid_2025_LNG_PI,3.714,MJ/tkm,inputs/raw/jec/JEC_TTW_HDV_v5.pdf,44de82324211010659c92ad38b19afc87f79a8764d7e0cda49ef96b5621eb7bb,71,51,3.714,"Payload weighted; conventional ICE; urban group is a rigid truck, not a bus"
+gas_supply_CO2,5.4,g/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,18,2,5.4,
+gas_supply_CH4,0.2,g/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,18,2,0.2,
+gas_supply_N2O,0.00017,g/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,18,2,1.7E-04,
+diesel_supply_GHG,21.9,gCO2e/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,20,4,21.9,
+HFO_supply_GHG,5.7,gCO2e/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,20,4,5.7,
+liquefaction_electricity,0.0605,MWh electricity/MWh liquid methane,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,43,section 5.1.9,0.0605,
+CNG_compression_default_GHG,2.4,gCO2e/MJ fuel,inputs/raw/jrc/JRC142012_2026_emission_values.pdf,a110a27a169e08a38e48a8376bc87479457e2f71c60a02faecdabb1451f2a30f,43,section 5.1.9,2.4,"Reference default only; primary calculations use explicit electricity and country marginal factors, never both."

@@ -1,0 +1,29 @@
+key,value,unit,evidence,source,locator
+de_raw_volume,6000000,m3 raw biogas/year,operator rounded annual quantity,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-13262.pdf,Q9
+de_feed,75000,t separately collected biowaste/year,rounded input for each of preceding two years,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-13262.pdf,Q9
+de_grid,30000,MWh reported biomethane/year,operator rounded injection calorific convention unspecified,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-13262.pdf,Q9 and Q11
+de_raw_yield,102,Nm3 raw biogas/t digester feed,operator reported with a distinct denominator,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-13262.pdf,Q9
+de_full_electric,2400,MWh electricity/year,whole-plant approximate annual demand disclosed 2019,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/s18-20113.pdf,Q5
+de_full_gas,5500,MWh gas/year,whole-plant approximate annual demand disclosed 2019,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/s18-20113.pdf,Q5
+de_full_fuel,300,MWh fuel/year,whole-plant approximate annual demand disclosed 2019,https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/s18-20113.pdf,Q5
+de_raw_ch4_assumed,0.60,volume fraction,scenario only range 0.55 to 0.65,no plant measurement,normal-volume assumption for reported raw volume
+ch4_lhv,9.94,kWh/Nm3 CH4,engineering conversion assumption,site experiment assumptions,per normal cubic metre
+it_chp_input_month,3400,MWh raw/month,measured monthly median during CHP period,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.1
+it_grid_input_month,3800,MWh raw/month,measured monthly median during upgrading period,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.1
+it_chp_electric,0.351,MWh electricity/MWh raw,measured median gross MV output after transformer,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.2 figure 5
+it_chp_heat,0.080,MWh heat/MWh raw,measured median heat supplied at plant heat-network interface,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.2 figure 5
+it_grid_gross,0.817,MWh biomethane/MWh raw,measured median gross product ratio,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.2 figure 5
+it_grid_adjusted,0.704,MWh biomethane-equivalent/MWh raw,authors adjusted auxiliary heat and power,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.3 table 2
+it_grid_q1,0.675,MWh biomethane-equivalent/MWh raw,adjusted monthly first quartile,https://doi.org/10.1016/j.apenergy.2024.124687,table 2
+it_grid_q3,0.724,MWh biomethane-equivalent/MWh raw,adjusted monthly third quartile,https://doi.org/10.1016/j.apenergy.2024.124687,table 2
+it_electric_q1,0.322,MWh electricity/MWh raw,monthly first quartile,https://doi.org/10.1016/j.apenergy.2024.124687,table 2
+it_electric_q3,0.379,MWh electricity/MWh raw,monthly third quartile,https://doi.org/10.1016/j.apenergy.2024.124687,table 2
+it_heat_potential,0.449,MWh heat/MWh raw,engineering-adjusted recoverable heat median,https://doi.org/10.1016/j.apenergy.2024.124687,section 3.3 table 2
+it_dh_delivery,0.85,fraction,assumed heat-network efficiency in original study,https://doi.org/10.1016/j.apenergy.2024.124687,section 2.3
+de_ch4_backcalc,0.59,volume fraction,2014 city inventory back-calculated from injection not an independent sensor,https://www.berlin.de/sen/uvk/_assets/umwelt/kreislaufwirtschaft/abfallbehoerde/abfallbilanzen/studie_langfassung_2014.pdf,section 4.2 pp76-77
+de_ch4_design,0.62,volume fraction,plant design value not measured,https://www.berlin.de/sen/uvk/_assets/umwelt/kreislaufwirtschaft/abfallbehoerde/abfallbilanzen/studie_langfassung_2014.pdf,section 4.2 pp76-77
+de_diesel_saved,2500000,litres diesel/year,operator counterfactual purchase savings not metered fossil displacement,https://www.bsr.de/biogasanlage,Diesel sparen mit Biogas
+de_hhv_to_lhv,0.90,LHV MWh per HHV MWh,rounded methane energy-basis sensitivity not a declared meter convention,site experiment assumptions,alternative when the disclosure is on HHV
+it_n_chp,36,months,three years of published monthly monitoring,https://doi.org/10.1016/j.apenergy.2024.124687,section 2.3
+it_n_grid,24,months,two years of published monthly monitoring,https://doi.org/10.1016/j.apenergy.2024.124687,section 2.3
+it_embedded_gas_ef,0.2359,t CO2e/MWh gas,sum of direct and upstream in original study,https://doi.org/10.1016/j.apenergy.2024.124687,table 1
