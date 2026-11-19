@@ -1,5 +1,7 @@
 # Non-fossil sinks and spatial lock-in erode the climate value of European food-waste biomethane power
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24361422.svg)](https://doi.org/10.5281/zenodo.24361422)
+
 **Authors:** Xingwen Cao$^{1,2}$, Zhengguang Liu$^{3}$, Hailong Li$^{4}$, Haoran Zhang$^{1,2,\ast}$ & Lingyue Wang$^{5}$
 
 1. School of Urban Planning and Design, Peking University Shenzhen Graduate School, Shenzhen, Guangdong 518055, China.

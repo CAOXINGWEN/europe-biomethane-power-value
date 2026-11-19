@@ -1,7 +1,7 @@
 file,format,rows,columns,used_in,column_preview,bytes,sha256
 CHP_heat_counterfactuals.csv,CSV,1728,8,Fig. 4d,year; weather; heat_counterfactual; h; heat_EF_t_per_MWhth; exported_heat_MWhth; net; injection_minus_site,161239,022147d32d8c5f4bc3a3f33f9d667d6533e3a6f6aeecb91df04d57043f6b7e58
 CHP_thermal_efficiency_sensitivity.csv,CSV,20,5,Extended Data Fig. 9b,year; thermal_efficiency; net_zero_heat_fraction; heat_fraction_to_match_injection; status,2725,59968e8c0aa532babf8c277e72c8de91a9a77e386bd8a5746342e815065510a5
-Source_Data_v17.xlsx,XLSX,,,Provenance / auxiliary metadata,,1604076,c7932ec837df64b535c21056fceae000582e3bfeedfe7aa79620a224e87be943
+Source_Data_v17.xlsx,XLSX,,,Provenance / auxiliary metadata,,1604076,28a72cdc7ba9794060940f9abb74cde7a6f7b82f90f0ef4cbcc471fe02c4dd71
 asymmetric_leakage_scenarios.csv,CSV,36,7,Provenance / auxiliary metadata,year; site_leakage; injection_leakage; site_net; injection_net; difference; h_match_injection,3526,ba0f9bcb82f1713244073092e4fd6574ce933c8bdf61cbeca80e72a006b2d817
 biogas_end_use.csv,CSV,30,11,Provenance / auxiliary metadata,source; sha256; geo; year; power_only_GWh; chp_GWh; heat_only_GWh; blended_into_gas_grid_GWh; final_consumption_GWh; energy_sector_own_use_GWh ...,5589,ff7beca7ba9eeefb457022387c8673b566633188c63f3deb0af380462ef23077
 boundary_base_by_weather.csv,CSV,144,17,"Fig. 1a-c,f-h; Fig. 4a; Extended Data Figs. 2, 9a",year; weather; B_MWh; D; avoided_domestic; avoided20; extra_H2_reported_MWh_per_MWh; avoided_external_import_MWhe_per_MWh; extra_P2H_MWhe_per_MWh; reduced_H2_power_MWhe_per_MWh ...,43751,d46b00ab4674cbc712e80e74feef54ac9df08bb304089c3669d735c20cca6eff

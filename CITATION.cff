@@ -2,7 +2,10 @@ cff-version: 1.2.0
 message: "If you use this code or dataset, please cite the accompanying manuscript and archived release."
 title: "Data and code for: Non-fossil sinks and spatial lock-in erode the climate value of European food-waste biomethane power"
 version: "v1.0.0"
+doi: "10.5281/zenodo.24361422"
 date-released: "2026-11-19"
+url: "https://doi.org/10.5281/zenodo.24361422"
+repository-code: "https://github.com/CAOXINGWEN/europe-biomethane-power-value"
 license: "MIT AND CC-BY-4.0"
 authors:
   - family-names: "Cao"
